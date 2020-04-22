@@ -16,6 +16,9 @@ public class CustomerControllerTest {
     @Mock
     private CustomerDatabase customerDatabase;
 
+    @Mock
+    private OrderDatabase orderDatabase;
+
     @InjectMocks
     private CustomerController customerController;
 
@@ -38,5 +41,7 @@ public class CustomerControllerTest {
 
         verify(customerDatabase).save(1, "test1");
         verify(customerDatabase).save(2, "test2");
+        verify(orderDatabase).hasOrders(1);
+        verify(orderDatabase).hasOrders(2);
     }
 }

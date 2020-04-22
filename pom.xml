@@ -16,11 +16,12 @@
     </build>
 
     <dependencies>
-
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>3.141.59</version>
+            <scope>test</scope>
+
             <exclusions>
                 <exclusion>
                     <artifactId>byte-buddy</artifactId>
